@@ -28,7 +28,7 @@ public class BasePage {
 	public BasePage(){
 		try {
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream("C:/Users/Sourabh/git/qaautoview/src/main/java/config/config.properties");
+			FileInputStream ip = new FileInputStream(System.getProperty("user.dir")+"/src/main/java/config/config.properties");
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -41,11 +41,11 @@ public class BasePage {
 		String browserName = prop.getProperty("browser");
 		
 		if(browserName.equals("chrome")){
-			System.setProperty("webdriver.chrome.driver", "C:/Users/Sourabh/git/qaautoview/src/main/java/drivers/chromedriver.exe");	
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/src/main/java/drivers/chromedriver.exe");	
 			driver = new ChromeDriver(); 
 		}
 		else if(browserName.equals("FF")){
-			System.setProperty("webdriver.gecko.driver", "C:/Users/Sourabh/git/qaautoview/src/main/java/drivers/geckodriver.exe");	
+			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"/src/main/java/drivers/geckodriver.exe");	
 			driver = new FirefoxDriver(); 
 		}
 		
