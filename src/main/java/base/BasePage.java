@@ -29,6 +29,12 @@ public class BasePage {
 			e.printStackTrace();
 		}
 	}
+	 
+	public static void openApplication(){
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/src/main/java/drivers/chromedriver.exe");	
+		driver = new ChromeDriver(); 
+		driver.get("https://www.amazon.in/");
+	}
 	
 	public static void initialization(){
 		String browserName = prop.getProperty("browser");

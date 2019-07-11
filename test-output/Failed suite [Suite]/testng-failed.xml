@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Failed suite [Suite]]">
+  <test thread-count="5" name="Test(failed)(failed)" parallel="methods">
+    <classes>
+      <class name="test.java.tests.HomeTest">
+        <methods>
+          <include name="browserClose"/>
+          <include name="setUp"/>
+          <include name="verifyDeals"/>
+          <include name="verifySell"/>
+        </methods>
+      </class> <!-- test.java.tests.HomeTest -->
+    </classes>
+  </test> <!-- Test(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Suite]] -->

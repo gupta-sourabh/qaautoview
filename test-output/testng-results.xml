@@ -1,21 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="10882" started-at="2019-07-10T17:30:14Z" finished-at="2019-07-10T17:30:25Z">
+  <suite name="Suite" duration-ms="12075" started-at="2019-07-11T13:02:19Z" finished-at="2019-07-11T13:02:31Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="10882" started-at="2019-07-10T17:30:14Z" finished-at="2019-07-10T17:30:25Z">
-      <class name="test.java.tests.HomeTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:test.java.tests.HomeTest@7823a2f9]" name="setUp" is-config="true" duration-ms="10841" started-at="2019-07-10T23:00:14Z" finished-at="2019-07-10T23:00:25Z">
+    <test name="Test" duration-ms="12075" started-at="2019-07-11T13:02:19Z" finished-at="2019-07-11T13:02:31Z">
+      <class name="test.java.tests.ParallelExecutionTest">
+        <test-method status="PASS" signature="executeSessionThree()[pri:0, instance:test.java.tests.ParallelExecutionTest@3cb1ffe6]" name="executeSessionThree" duration-ms="12053" started-at="2019-07-11T13:02:19Z" finished-at="2019-07-11T13:02:31Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginPageTitleTest()[pri:0, instance:test.java.tests.HomeTest@7823a2f9]" name="loginPageTitleTest" duration-ms="13" started-at="2019-07-10T23:00:25Z" finished-at="2019-07-10T23:00:25Z">
+        </test-method> <!-- executeSessionThree -->
+        <test-method status="PASS" signature="executeSessionOne()[pri:0, instance:test.java.tests.ParallelExecutionTest@3cb1ffe6]" name="executeSessionOne" duration-ms="11392" started-at="2019-07-11T13:02:19Z" finished-at="2019-07-11T13:02:30Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginPageTitleTest -->
-      </class> <!-- test.java.tests.HomeTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- executeSessionOne -->
+        <test-method status="PASS" signature="executeSessionTwo()[pri:0, instance:test.java.tests.ParallelExecutionTest@3cb1ffe6]" name="executeSessionTwo" duration-ms="11477" started-at="2019-07-11T13:02:19Z" finished-at="2019-07-11T13:02:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- executeSessionTwo -->
+        <test-method status="FAIL" signature="quitBrowser()[pri:0, instance:test.java.tests.ParallelExecutionTest@3cb1ffe6]" name="quitBrowser" is-config="true" duration-ms="1" started-at="2019-07-11T13:02:31Z" finished-at="2019-07-11T13:02:31Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at test.java.tests.ParallelExecutionTest.quitBrowser(ParallelExecutionTest.java:27)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.TestRunner.afterRun(TestRunner.java:725)
+at org.testng.TestRunner.run(TestRunner.java:509)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitBrowser -->
+      </class> <!-- test.java.tests.ParallelExecutionTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
