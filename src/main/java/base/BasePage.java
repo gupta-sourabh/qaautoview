@@ -18,13 +18,6 @@ public class BasePage {
 	public  static EventFiringWebDriver e_driver;
 	public static WebEventListener eventListener;
 
-	public String openApplicationUrl(String appUrl) {
-		driver.get(appUrl);
-		// Maximize Window
-		driver.manage().window().maximize();
-		return appUrl;
-	}
-	
 	public BasePage(){
 		try {
 			prop = new Properties();
@@ -49,7 +42,6 @@ public class BasePage {
 			driver = new FirefoxDriver(); 
 		}
 		
-		
 		e_driver = new EventFiringWebDriver(driver);
 		// Now create object of EventListerHandler to register it with EventFiringWebDriver
 		eventListener = new WebEventListener();
@@ -61,8 +53,10 @@ public class BasePage {
 //		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		
 		driver.get(prop.getProperty("url"));
-		
 	}
 	
+	public static void closeBrowser() {
+		driver.close();
+	}
 
 }

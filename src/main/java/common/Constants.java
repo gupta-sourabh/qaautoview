@@ -1,4 +1,4 @@
-package com.restapi.rest_api_test.common;
+package main.java.common;
 
 public class Constants 
 {

@@ -12,14 +12,26 @@ public class HomeTest extends BasePage{
 		super();
 	}
 	
-	@BeforeMethod
+	@BeforeTest
 	public void setUp(){
 		initialization();
 		homePage = new HomePage();	
 	}
 	
-	@Test(priority=1)
-	public void loginPageTitleTest(){
-//		homePage.validateGoogleLogo();
+	@Test
+	public void verifySignIn(){
+		homePage.clickOnSignOption();
+		System.out.println("Test verifySignIn: " + Thread.currentThread().getId());
+	}
+	
+	@Test
+	public void verifyPricing(){
+		homePage.clickPricingOption();
+		System.out.println("Test verifyPricing: " + Thread.currentThread().getId());
+	}
+	
+	@AfterTest
+	public void browserClose() {
+		closeBrowser();
 	}
 }
